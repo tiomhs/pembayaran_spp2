@@ -35,7 +35,16 @@
                                 <td><?= $siswa['nama_kelas']; ?></td>
                                 <td><?= $siswa['tahun_ajaran']; ?></td>
                                 <td>
-                                    <a href="<?= BASEURL ?>/admin_transaksi/history/<?= $siswa['id']; ?>" class="btn btn-info">History Pembayaran</a>
+                                    <div class="row">
+                                        <div class="col-6">
+                                        <a href="<?= BASEURL ?>/admin_transaksi/history/<?= $siswa['id']; ?>" class="btn btn-info">History Pembayaran</a>
+                                        </div>
+                                        <div class="col-6">
+                                        <a href="<?= BASEURL ?>/admin_transaksi/bayar/<?= $siswa['id']; ?>" class="btn btn-primary">Bayar Spp</a>
+                                        </div>
+                                    </div>
+                                    
+                                    
                                 </td>
                             </tr>
                             <?php endforeach; ?>

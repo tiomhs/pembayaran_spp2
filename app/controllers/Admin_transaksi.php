@@ -15,12 +15,15 @@ class Admin_transaksi extends Controller{
     }
 
     public function history($id){
+        $siswa = $this->model('Siswa_model')->getSiswaWithRelationId($id);
         $history = $this->model('Transaksi_model')->getTransaksiById($id);
 
         $data = [
             'judul' => 'History Pembayaran',
-            'history' => $history
+            'history' => $history,
+            'siswa' => $id
         ];
+        // var_dump($history);die;
 
         $this->view('templates/header',$data);
         $this->view('admin/admin_transaksi/history', $data);

@@ -3,7 +3,7 @@
     <h4 class="mt-5">
         History Pembayaran
     </h4>
-    <a href="<?= BASEURL ?>/admin_transaksi/add/<?= $data['history'][0]['siswa_id']; ?>" class="btn btn-primary mb-2">Tambah Pembayaran</a>
+    <a href="<?= BASEURL ?>/admin_transaksi/add/<?= $data['siswa']; ?>" class="btn btn-primary mb-2">Tambah Pembayaran</a>
     <div class="row">
         <div class="col">
         <div class="card shadow mb-4">
