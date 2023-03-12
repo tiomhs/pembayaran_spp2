@@ -37,6 +37,10 @@ class Login extends Controller{
                     redirect("/home/index");
                     break;
             }
+        }else{
+            echo "Username atau Password Salah";
+            redirect("");
+            
         }
     }
 }
