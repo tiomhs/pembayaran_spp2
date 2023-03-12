@@ -40,7 +40,7 @@
                                         <a href="<?= BASEURL ?>/admin_transaksi/history/<?= $siswa['id']; ?>" class="btn btn-info">History Pembayaran</a>
                                         </div>
                                         <div class="col-6">
-                                        <a href="<?= BASEURL ?>/admin_transaksi/bayar/<?= $siswa['id']; ?>" class="btn btn-primary">Bayar Spp</a>
+                                        <a href="<?= BASEURL ?>/admin_transaksi/add/<?= $siswa['id']; ?>" class="btn btn-primary">Bayar Spp</a>
                                         </div>
                                     </div>
                                     
