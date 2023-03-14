@@ -1,4 +1,5 @@
 <div class="container">
+    <?php Flasher::flash(); ?>
     <h4 class="mt-5">
         Manajemen Kelas
     </h4>
@@ -28,7 +29,7 @@
                                 <td><?= $kelas['kompetensi_keahlian']; ?></td>
                                 <td>
                                     <a href="<?= BASEURL ?>/admin_kelas/edit/<?= $kelas['id']; ?>" class="btn btn-info">Edit</a>
-                                    <a href="<?= BASEURL ?>/admin_kelas/delete/<?= $kelas['id']; ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?= BASEURL ?>/admin_kelas/delete/<?= $kelas['id']; ?>" class="btn btn-danger" onclick="return confirm('yakin?')">Delete</a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

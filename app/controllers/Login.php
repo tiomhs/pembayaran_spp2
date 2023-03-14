@@ -38,7 +38,7 @@ class Login extends Controller{
                     break;
             }
         }else{
-            echo "Username atau Password Salah";
+            Flasher::setFlash('Username Atau Password', 'Salah', 'danger');
             redirect("");
             
         }

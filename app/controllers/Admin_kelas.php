@@ -27,10 +27,10 @@ class Admin_kelas extends Controller{
     public function add(){
         $tambah = $this->model('Kelas_model')->tambahKelas($_POST);
         if ($tambah > 0) {
-            echo "<script>alert('Tambah Berhasil');</script>";
+            Flasher::setFlash('Kelas Berhasil', 'ditambahkan', 'success');
             redirect("/admin_kelas/index");
         }else {
-            echo "<script>alert('Tambah Gagal');</script>";
+            Flasher::setFlash('Kelas Gagal', 'ditambahkan', 'danger');
             redirect("/admin_kelas/index");
         }
     }
@@ -51,10 +51,10 @@ class Admin_kelas extends Controller{
     public function update(){
         $update = $this->model('Kelas_model')->updateKelas($_POST);
         if ($update > 0) {
-            echo "<script>alert('Update Berhasil');</script>";
+            Flasher::setFlash('Kelas Berhasil', 'diubah', 'success');
             redirect("/admin_kelas/index");
         }else {
-            echo "<script>alert('Update Gagal');</script>";
+            Flasher::setFlash('Kelas gagal', 'diubah', 'danger');
             redirect("/admin_kelas/index");
         }
     }
@@ -62,10 +62,10 @@ class Admin_kelas extends Controller{
     public function delete($id){
         $delete = $this->model('Kelas_model')->deleteKelas($id);
         if ($delete) {
-            echo "<script>alert('Delete Berhasil');</script>";
+            Flasher::setFlash('Kelas Berhasil', 'dihapus', 'success');
             redirect("/admin_kelas/index");
         }else {
-            echo "<script>alert('Delete Gagal');</script>";
+            Flasher::setFlash('Kelas Gagal', 'dihapus', 'danger');
             redirect("/admin_kelas/index");
         }
     }

@@ -28,8 +28,11 @@
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
-
+            
             <div class="col-xl-7 col-lg-9 col-md-7">
+                <div class="my-5">
+                    <?php Flasher::flash(); ?>
+                </div>
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
